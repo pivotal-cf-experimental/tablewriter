@@ -36,8 +36,7 @@ func ConditionString(cond bool, valid, inValid string) string {
 func Title(name string) string {
 	name = strings.Replace(name, "_", " ", -1)
 	name = strings.Replace(name, ".", " ", -1)
-	name = strings.TrimSpace(name)
-	return strings.ToUpper(name)
+	return strings.TrimSpace(name)
 }
 
 // Pad String
