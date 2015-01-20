@@ -100,7 +100,7 @@ func (t Table) Render() {
 func (t *Table) AppendAndRender(r []string) {
 	t.Append(r)
 	lines := t.lines[len(t.lines)-1]
-	t.printRow(lines, 1)
+	t.printRow(lines, 0)
 }
 
 // Set table header
