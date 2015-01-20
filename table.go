@@ -97,6 +97,12 @@ func (t Table) Render() {
 
 }
 
+func (t Table) AppendAndRender(row []string) {
+	t.Append(row)
+	lines := t.lines[len(t.lines)-1]
+	t.printRow(lines, 1)
+}
+
 // Set table header
 func (t *Table) SetHeader(keys []string) {
 	t.colSize = len(keys)
